@@ -50,6 +50,25 @@ Public Class IMUdata
   End Function
 #End Region
 
+  Public ReadOnly Property gps_XYZ As Point3D
+    Get
+      Dim res As New Point3D
+      Dim cosLat As Double = Math.Cos(Me.gpsPosition.X * Math.PI / 180.0)
+      Dim sinLat As Double = Math.Sin(Me.gpsPosition.X * Math.PI / 180.0)
+      Dim cosLon As Double = Math.Cos(Me.gpsPosition.Y * Math.PI / 180.0)
+      Dim sinLon As Double = Math.Sin(Me.gpsPosition.Y * Math.PI / 180.0)
+      Dim rad As Double = 6378137.0
+      Dim f As Double = 1.0 / 298.257224
+      Dim C As Double = 1.0 / Math.Sqrt(cosLat * cosLat + (1 - f) * (1 - f) * sinLat * sinLat)
+      Dim S As Double = (1.0 - f) * (1.0 - f) * C
+      Dim h As Double = 0.0
+      res.X = (rad * C + h) * cosLat * cosLon
+      res.Y = (rad * C + h) * cosLat * sinLon
+      res.Z = (rad * S + h) * sinLat
+      Return res
+    End Get
+  End Property
+
 
   Public Overrides Function ToString() As String
     Return Me.Get_csvLine

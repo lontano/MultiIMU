@@ -9,6 +9,9 @@
   Public Property LastIMUData As IMUdata
   Public Property IMUData As New List(Of IMUdata)
 
+  Public Property VisibleFromCameraIDs As New List(Of String)
+  Public Property VisibleTransponderIDs As New List(Of String)
+
   Public Sub New(name As String)
     Me.name = name
   End Sub
