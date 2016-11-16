@@ -31,6 +31,13 @@ Public Class frmSimulator
       If _socketClient.IsConnected Then
         Dim data As New IMUdata(Me.TextBoxName.Text)
         data.timeStamp = (DateTime.Now - New DateTime(1970, 1, 1)).TotalMilliseconds
+        data.magneticOrientation.X = Me.NumericUpDownOrientatin_X.Value
+        data.magneticOrientation.Y = Me.NumericUpDownOrientatin_Y.Value
+        data.magneticOrientation.Z = Me.NumericUpDownOrientatin_Z.Value
+
+        data.gpsPosition.X = Me.NumericUpDown1.Value
+        data.gpsPosition.Y = Me.NumericUpDown2.Value
+        data.gpsPosition.Z = Me.NumericUpDown3.Value
         _socketClient.Send(data.Get_csvLine)
       End If
     Catch ex As Exception

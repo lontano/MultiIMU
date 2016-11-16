@@ -38,13 +38,13 @@ Public Class IMUdata
   Public Function Get_csvLine() As String
     Dim res As String = ""
 
-    res = res & Me.timeStamp & "   "
-    res = res & " orientation_X = " & CInt(Me.magneticOrientation.X) & ","
-    res = res & " orientation_Y = " & CInt(Me.magneticOrientation.Y) & ","
-    res = res & " orientation_Z = " & CInt(Me.magneticOrientation.Z) & ","
-    res = res & " Long = " & CInt(Me.gpsPosition.X) & ","
-    res = res & " Lat = " & CInt(Me.gpsPosition.Y) & ","
-    res = res & " Alt = " & CInt(Me.gpsPosition.Z) & ",#"
+    res = res & Me.timeStamp & ","
+    res = res & "" & Strings.Format(Me.magneticOrientation.X, "0.00").Replace(",", ".") & ","
+    res = res & "" & Strings.Format(Me.magneticOrientation.Y).Replace(",", ".") & ","
+    res = res & "" & Strings.Format(Me.magneticOrientation.Z).Replace(",", ".") & ","
+    res = res & "" & Strings.Format(Me.gpsPosition.X).Replace(",", ".") & ","
+    res = res & "" & Strings.Format(Me.gpsPosition.Y).Replace(",", ".") & ","
+    res = res & "" & Strings.Format(Me.gpsPosition.Z).Replace(",", ".") & ",#"
 
     Return res
   End Function
