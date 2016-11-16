@@ -83,6 +83,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SocketClasses\SocketClient.vb" />
     <Compile Include="SocketClasses\SocketListener.vb" />
     <Compile Include="SocketClasses\StateObject.vb" />
     <Compile Include="ucIMUdevice.Designer.vb">

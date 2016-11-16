@@ -44,7 +44,7 @@ Public Class IMUdata
     res = res & " orientation_Z = " & CInt(Me.magneticOrientation.Z) & ","
     res = res & " Long = " & CInt(Me.gpsPosition.X) & ","
     res = res & " Lat = " & CInt(Me.gpsPosition.Y) & ","
-    res = res & " Alt = " & CInt(Me.gpsPosition.Z) & ","
+    res = res & " Alt = " & CInt(Me.gpsPosition.Z) & ",#"
 
     Return res
   End Function

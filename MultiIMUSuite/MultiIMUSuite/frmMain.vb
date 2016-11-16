@@ -157,4 +157,9 @@ Public Class frmMain
   Private Sub UcIMUdeviceSelected_Load(sender As Object, e As EventArgs) Handles UcIMUdeviceSelected.Load
 
   End Sub
+
+  Private Sub ButtonSimulator_Click(sender As Object, e As EventArgs) Handles ButtonSimulator.Click
+    Dim dlg As New frmSimulator()
+    dlg.Show(Me)
+  End Sub
 End Class

@@ -40,6 +40,7 @@ Partial Class frmMain
     Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
     Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
     Me.UcIMUdeviceSelected = New MultiIMU_components.ucIMUdevice()
+    Me.ButtonSimulator = New System.Windows.Forms.Button()
     Me.TableLayoutPanel1.SuspendLayout()
     CType(Me.PictureBoxCanvas, System.ComponentModel.ISupportInitialize).BeginInit()
     Me.SuspendLayout()
@@ -56,14 +57,16 @@ Partial Class frmMain
     '
     'TableLayoutPanel1
     '
-    Me.TableLayoutPanel1.ColumnCount = 2
+    Me.TableLayoutPanel1.ColumnCount = 3
     Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200.0!))
     Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+    Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200.0!))
     Me.TableLayoutPanel1.Controls.Add(Me.ButtonConnect, 0, 0)
     Me.TableLayoutPanel1.Controls.Add(Me.LabelDevices, 0, 1)
     Me.TableLayoutPanel1.Controls.Add(Me.PictureBoxCanvas, 1, 4)
     Me.TableLayoutPanel1.Controls.Add(Me.ListViewDevices, 0, 2)
     Me.TableLayoutPanel1.Controls.Add(Me.UcIMUdeviceSelected, 0, 3)
+    Me.TableLayoutPanel1.Controls.Add(Me.ButtonSimulator, 2, 0)
     Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
     Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
     Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -79,7 +82,7 @@ Partial Class frmMain
     'LabelDevices
     '
     Me.LabelDevices.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-    Me.TableLayoutPanel1.SetColumnSpan(Me.LabelDevices, 2)
+    Me.TableLayoutPanel1.SetColumnSpan(Me.LabelDevices, 3)
     Me.LabelDevices.Dock = System.Windows.Forms.DockStyle.Fill
     Me.LabelDevices.Location = New System.Drawing.Point(3, 30)
     Me.LabelDevices.Name = "LabelDevices"
@@ -90,6 +93,7 @@ Partial Class frmMain
     'PictureBoxCanvas
     '
     Me.PictureBoxCanvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+    Me.TableLayoutPanel1.SetColumnSpan(Me.PictureBoxCanvas, 2)
     Me.PictureBoxCanvas.Dock = System.Windows.Forms.DockStyle.Fill
     Me.PictureBoxCanvas.Location = New System.Drawing.Point(203, 263)
     Me.PictureBoxCanvas.Name = "PictureBoxCanvas"
@@ -100,7 +104,7 @@ Partial Class frmMain
     'ListViewDevices
     '
     Me.ListViewDevices.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12})
-    Me.TableLayoutPanel1.SetColumnSpan(Me.ListViewDevices, 2)
+    Me.TableLayoutPanel1.SetColumnSpan(Me.ListViewDevices, 3)
     Me.ListViewDevices.Dock = System.Windows.Forms.DockStyle.Fill
     Me.ListViewDevices.Location = New System.Drawing.Point(3, 93)
     Me.ListViewDevices.Name = "ListViewDevices"
@@ -112,12 +116,22 @@ Partial Class frmMain
     'UcIMUdeviceSelected
     '
     Me.UcIMUdeviceSelected.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-    Me.TableLayoutPanel1.SetColumnSpan(Me.UcIMUdeviceSelected, 2)
+    Me.TableLayoutPanel1.SetColumnSpan(Me.UcIMUdeviceSelected, 3)
     Me.UcIMUdeviceSelected.Dock = System.Windows.Forms.DockStyle.Fill
     Me.UcIMUdeviceSelected.Location = New System.Drawing.Point(3, 193)
     Me.UcIMUdeviceSelected.Name = "UcIMUdeviceSelected"
     Me.UcIMUdeviceSelected.Size = New System.Drawing.Size(951, 64)
     Me.UcIMUdeviceSelected.TabIndex = 6
+    '
+    'ButtonSimulator
+    '
+    Me.ButtonSimulator.Dock = System.Windows.Forms.DockStyle.Fill
+    Me.ButtonSimulator.Location = New System.Drawing.Point(760, 3)
+    Me.ButtonSimulator.Name = "ButtonSimulator"
+    Me.ButtonSimulator.Size = New System.Drawing.Size(194, 24)
+    Me.ButtonSimulator.TabIndex = 7
+    Me.ButtonSimulator.Text = "Simulator"
+    Me.ButtonSimulator.UseVisualStyleBackColor = True
     '
     'frmMain
     '
@@ -151,4 +165,5 @@ Partial Class frmMain
   Friend WithEvents ColumnHeader11 As ColumnHeader
   Friend WithEvents ColumnHeader12 As ColumnHeader
   Friend WithEvents UcIMUdeviceSelected As MultiIMU_components.ucIMUdevice
+  Friend WithEvents ButtonSimulator As Button
 End Class
