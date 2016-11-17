@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{5C103DCF-CD23-E5E1-C1B0-C8ECD1760C29}") = "IMU_simulator", "Assembly-CSharp-firstpass.csproj", "{BBF549F0-19E9-3A65-3D9A-3F49BFCED779}"
+EndProject
+Project("{5C103DCF-CD23-E5E1-C1B0-C8ECD1760C29}") = "IMU_simulator", "Assembly-CSharp.csproj", "{DB8F8187-84A2-2C79-DEE8-E7550DFB3D97}"
+EndProject
+Project("{5C103DCF-CD23-E5E1-C1B0-C8ECD1760C29}") = "IMU_simulator", "Assembly-CSharp-Editor.csproj", "{4BE60108-1090-23BA-E07D-A54DC77DB2B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBF549F0-19E9-3A65-3D9A-3F49BFCED779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF549F0-19E9-3A65-3D9A-3F49BFCED779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF549F0-19E9-3A65-3D9A-3F49BFCED779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF549F0-19E9-3A65-3D9A-3F49BFCED779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB8F8187-84A2-2C79-DEE8-E7550DFB3D97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB8F8187-84A2-2C79-DEE8-E7550DFB3D97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB8F8187-84A2-2C79-DEE8-E7550DFB3D97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB8F8187-84A2-2C79-DEE8-E7550DFB3D97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE60108-1090-23BA-E07D-A54DC77DB2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE60108-1090-23BA-E07D-A54DC77DB2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE60108-1090-23BA-E07D-A54DC77DB2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE60108-1090-23BA-E07D-A54DC77DB2B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
