@@ -1,15 +1,16 @@
 ﻿Imports MultiIMU_components
+Imports MultiIMUSuite
 
 Public Class frmSimulator
-  Private WithEvents _socketClient As SocketClient
+  Private WithEvents _socketClient As TCPSocketClient
 
 
   Private Sub ButtonConnect_Click(sender As Object, e As EventArgs) Handles ButtonConnect.Click
     Try
       If _socketClient Is Nothing Then
-        _socketClient = New SocketClient
+        _socketClient = New TCPSocketClient
         _socketClient.Connect(Me.TextBoxHost.Text, Me.NumericUpDownPort.Value)
-        TimerData.Interval = 100
+        TimerData.Interval = 20
         TimerData.Enabled = True
         Me.ButtonConnect.Text = "Disconnect"
       Else
@@ -43,5 +44,21 @@ Public Class frmSimulator
     Catch ex As Exception
 
     End Try
+  End Sub
+
+  Private Sub frmSimulator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+  End Sub
+
+  Private WithEvents _yoctogps As YoctoGPSHelper
+  Private Sub ButtonYocto_Click(sender As Object, e As EventArgs) Handles ButtonYocto.Click
+    _yoctogps = New YoctoGPSHelper()
+    _yoctogps.InitHelper()
+  End Sub
+
+  Private Sub _yoctogps_PositionUpdated(ByRef sender As YoctoGPSHelper) Handles _yoctogps.PositionUpdated
+    'Me.NumericUpDown1.Value = _yoctogps.Longitude
+    'Me.NumericUpDown1.Value = _yoctogps.Latitude
+    'Me.NumericUpDown1.Value = _yoctogps.Altitude
   End Sub
 End Class

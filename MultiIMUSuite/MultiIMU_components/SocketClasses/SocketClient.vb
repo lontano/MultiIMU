@@ -5,7 +5,7 @@ Imports System.Threading
 Imports System.Windows.Forms
 
 
-Public Class SocketClient
+Public Class TCPSocketClient
 #Region "Private Memebers"
   '--The Actual receive/send
   Private CPiTCPSocket As Socket

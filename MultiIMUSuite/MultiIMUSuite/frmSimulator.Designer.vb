@@ -31,7 +31,6 @@ Partial Class frmSimulator
     Me.NumericUpDownPort = New System.Windows.Forms.NumericUpDown()
     Me.ButtonConnect = New System.Windows.Forms.Button()
     Me.TextBoxName = New System.Windows.Forms.TextBox()
-    Me.TimerData = New System.Windows.Forms.Timer(Me.components)
     Me.LabelOrientation = New System.Windows.Forms.Label()
     Me.Label4 = New System.Windows.Forms.Label()
     Me.Label5 = New System.Windows.Forms.Label()
@@ -46,6 +45,8 @@ Partial Class frmSimulator
     Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
     Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
     Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+    Me.ButtonYocto = New System.Windows.Forms.Button()
+    Me.TimerData = New System.Windows.Forms.Timer(Me.components)
     Me.TableLayoutPanel1.SuspendLayout()
     CType(Me.NumericUpDownPort, System.ComponentModel.ISupportInitialize).BeginInit()
     CType(Me.NumericUpDownOrientatin_X, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +84,7 @@ Partial Class frmSimulator
     Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown1, 1, 11)
     Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown2, 1, 12)
     Me.TableLayoutPanel1.Controls.Add(Me.NumericUpDown3, 1, 13)
+    Me.TableLayoutPanel1.Controls.Add(Me.ButtonYocto, 2, 3)
     Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
     Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
     Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -154,6 +156,7 @@ Partial Class frmSimulator
     Me.NumericUpDownPort.Name = "NumericUpDownPort"
     Me.NumericUpDownPort.Size = New System.Drawing.Size(65, 20)
     Me.NumericUpDownPort.TabIndex = 4
+    Me.NumericUpDownPort.Value = New Decimal(New Integer() {800, 0, 0, 0})
     '
     'ButtonConnect
     '
@@ -173,15 +176,13 @@ Partial Class frmSimulator
     Me.TextBoxName.Name = "TextBoxName"
     Me.TextBoxName.Size = New System.Drawing.Size(125, 20)
     Me.TextBoxName.TabIndex = 6
-    '
-    'TimerData
-    '
+    Me.TextBoxName.Text = "800"
     '
     'LabelOrientation
     '
     Me.LabelOrientation.AutoSize = True
     Me.LabelOrientation.Dock = System.Windows.Forms.DockStyle.Fill
-    Me.LabelOrientation.Font = New System.Drawing.Font("Museo Sans Rounded 900", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+    Me.LabelOrientation.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
     Me.LabelOrientation.Location = New System.Drawing.Point(123, 95)
     Me.LabelOrientation.Name = "LabelOrientation"
     Me.LabelOrientation.Size = New System.Drawing.Size(125, 25)
@@ -193,7 +194,7 @@ Partial Class frmSimulator
     '
     Me.Label4.AutoSize = True
     Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-    Me.Label4.Font = New System.Drawing.Font("Museo Sans Rounded 900", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+    Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
     Me.Label4.Location = New System.Drawing.Point(123, 205)
     Me.Label4.Name = "Label4"
     Me.Label4.Size = New System.Drawing.Size(125, 25)
@@ -333,6 +334,18 @@ Partial Class frmSimulator
     Me.NumericUpDown3.TabIndex = 11
     Me.NumericUpDown3.Value = New Decimal(New Integer() {150, 0, 0, 0})
     '
+    'ButtonYocto
+    '
+    Me.ButtonYocto.Location = New System.Drawing.Point(254, 63)
+    Me.ButtonYocto.Name = "ButtonYocto"
+    Me.ButtonYocto.Size = New System.Drawing.Size(105, 19)
+    Me.ButtonYocto.TabIndex = 12
+    Me.ButtonYocto.Text = "Yocto"
+    Me.ButtonYocto.UseVisualStyleBackColor = True
+    '
+    'TimerData
+    '
+    '
     'frmSimulator
     '
     Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,4 +390,5 @@ Partial Class frmSimulator
   Friend WithEvents NumericUpDown1 As NumericUpDown
   Friend WithEvents NumericUpDown2 As NumericUpDown
   Friend WithEvents NumericUpDown3 As NumericUpDown
+  Friend WithEvents ButtonYocto As Button
 End Class

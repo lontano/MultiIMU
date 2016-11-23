@@ -100,6 +100,65 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Yocto3DHelper.vb" />
+    <Compile Include="YoctoGPSHelper.vb" />
+    <Compile Include="Yocto\yocto_accelerometer.vb" />
+    <Compile Include="Yocto\yocto_altitude.vb" />
+    <Compile Include="Yocto\yocto_anbutton.vb" />
+    <Compile Include="YoctoApi\yocto_api.vb" />
+    <Compile Include="Yocto\yocto_audioin.vb" />
+    <Compile Include="Yocto\yocto_audioout.vb" />
+    <Compile Include="Yocto\yocto_bluetoothlink.vb" />
+    <Compile Include="Yocto\yocto_buzzer.vb" />
+    <Compile Include="Yocto\yocto_carbondioxide.vb" />
+    <Compile Include="Yocto\yocto_cellular.vb" />
+    <Compile Include="Yocto\yocto_colorled.vb" />
+    <Compile Include="Yocto\yocto_colorledcluster.vb" />
+    <Compile Include="Yocto\yocto_compass.vb" />
+    <Compile Include="Yocto\yocto_current.vb" />
+    <Compile Include="Yocto\yocto_currentloopoutput.vb" />
+    <Compile Include="Yocto\yocto_datalogger.vb" />
+    <Compile Include="Yocto\yocto_digitalio.vb" />
+    <Compile Include="Yocto\yocto_display.vb" />
+    <Compile Include="Yocto\yocto_dualpower.vb" />
+    <Compile Include="Yocto\yocto_files.vb" />
+    <Compile Include="Yocto\yocto_genericsensor.vb" />
+    <Compile Include="Yocto\yocto_gps.vb" />
+    <Compile Include="Yocto\yocto_groundspeed.vb" />
+    <Compile Include="Yocto\yocto_gyro.vb" />
+    <Compile Include="Yocto\yocto_hubport.vb" />
+    <Compile Include="Yocto\yocto_humidity.vb" />
+    <Compile Include="Yocto\yocto_latitude.vb" />
+    <Compile Include="Yocto\yocto_led.vb" />
+    <Compile Include="Yocto\yocto_lightsensor.vb" />
+    <Compile Include="Yocto\yocto_longitude.vb" />
+    <Compile Include="Yocto\yocto_magnetometer.vb" />
+    <Compile Include="Yocto\yocto_messagebox.vb" />
+    <Compile Include="Yocto\yocto_motor.vb" />
+    <Compile Include="Yocto\yocto_network.vb" />
+    <Compile Include="Yocto\yocto_oscontrol.vb" />
+    <Compile Include="Yocto\yocto_power.vb" />
+    <Compile Include="Yocto\yocto_poweroutput.vb" />
+    <Compile Include="Yocto\yocto_pressure.vb" />
+    <Compile Include="Yocto\yocto_pwminput.vb" />
+    <Compile Include="Yocto\yocto_pwmoutput.vb" />
+    <Compile Include="Yocto\yocto_pwmpowersource.vb" />
+    <Compile Include="Yocto\yocto_quadraturedecoder.vb" />
+    <Compile Include="Yocto\yocto_realtimeclock.vb" />
+    <Compile Include="Yocto\yocto_refframe.vb" />
+    <Compile Include="Yocto\yocto_relay.vb" />
+    <Compile Include="Yocto\yocto_segmenteddisplay.vb" />
+    <Compile Include="Yocto\yocto_serialport.vb" />
+    <Compile Include="Yocto\yocto_servo.vb" />
+    <Compile Include="Yocto\yocto_spiport.vb" />
+    <Compile Include="Yocto\yocto_temperature.vb" />
+    <Compile Include="Yocto\yocto_tilt.vb" />
+    <Compile Include="Yocto\yocto_voc.vb" />
+    <Compile Include="Yocto\yocto_voltage.vb" />
+    <Compile Include="Yocto\yocto_wakeupmonitor.vb" />
+    <Compile Include="Yocto\yocto_wakeupschedule.vb" />
+    <Compile Include="Yocto\yocto_watchdog.vb" />
+    <Compile Include="Yocto\yocto_wireless.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmMain.resx">
@@ -133,6 +192,12 @@
       <Name>MultiIMU_components</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="yapi.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
